@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Papirus — Gizlilik Politikası</title>
+<style>
+  :root {
+    --bg: #fafaf7;
+    --card: #ffffff;
+    --text: #1f2024;
+    --muted: #5a5d66;
+    --accent: #8b6f47;
+    --border: #e6e4dd;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.65; }
+  .container { max-width: 760px; margin: 0 auto; padding: 32px 20px 80px; }
+  header { padding: 24px 0 16px; border-bottom: 1px solid var(--border); margin-bottom: 28px; }
+  header h1 { margin: 0 0 4px; font-size: 28px; letter-spacing: -0.5px; }
+  header .meta { color: var(--muted); font-size: 14px; }
+  h2 { font-size: 20px; margin: 36px 0 12px; color: var(--accent); }
+  h3 { font-size: 16px; margin: 24px 0 8px; }
+  p, li { font-size: 15px; color: var(--text); }
+  ul { padding-left: 22px; }
+  ul li { margin-bottom: 6px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px 22px; margin: 20px 0; }
+  a { color: var(--accent); }
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--muted); font-size: 13px; text-align: center; }
+  .lang-switch { float: right; font-size: 13px; }
+  .lang-switch a { margin-left: 10px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <div class="lang-switch"><a href="#en">English</a></div>
+    <h1>Papirus — Gizlilik Politikası</h1>
+    <div class="meta">Son güncelleme: 30 Mayıs 2026 · Sürüm 1.0</div>
+  </header>
+
+  <p>
+    Bu gizlilik politikası, <strong>Papirus</strong> mobil uygulamasının
+    (paket adı: <code>com.papirusapp.app</code>) kullanıcı verilerini nasıl topladığını,
+    işlediğini, sakladığını ve koruduğunu açıklar. Uygulamayı indirip kullanarak bu
+    politikayı kabul etmiş olursunuz.
+  </p>
+
+  <h2>1. Veri Sorumlusu</h2>
+  <div class="card">
+    <p><strong>Geliştirici:</strong> Yusuf Yalçın (bireysel geliştirici)<br>
+    <strong>İletişim e-postası:</strong> <a href="mailto:dyyalcin90@gmail.com">dyyalcin90@gmail.com</a><br>
+    <strong>Uygulama:</strong> Papirus — Kişisel Kütüphane</p>
+  </div>
+
+  <h2>2. Topladığımız Veriler</h2>
+  <p>Papirus yalnızca hizmeti sunmak için gereken minimum veriyi toplar. İşte tüm veri kategorileri:</p>
+
+  <table>
+    <thead>
+      <tr><th>Veri</th><th>Zorunlu mu?</th><th>Amacı</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>E-posta adresi</td><td>Evet</td><td>Hesap oluşturma ve giriş</td></tr>
+      <tr><td>İsim (görünen ad)</td><td>Opsiyonel</td><td>Profil kişiselleştirme</td></tr>
+      <tr><td>Profil fotoğrafı</td><td>Opsiyonel</td><td>Profil kişiselleştirme</td></tr>
+      <tr><td>Kitap listesi (eklediğin kitaplar)</td><td>Kullanıcı üretir</td><td>Kütüphane özelliği</td></tr>
+      <tr><td>Notlar ve alıntılar</td><td>Kullanıcı üretir</td><td>Not özelliği</td></tr>
+      <tr><td>Okuma oturumları (sayfa ilerleme)</td><td>Kullanıcı üretir</td><td>İstatistik özelliği</td></tr>
+      <tr><td>Push bildirim token'ı</td><td>Opsiyonel</td><td>Bildirim göndermek</td></tr>
+      <tr><td>Çökme raporları (Sentry)</td><td>Otomatik</td><td>Hata ayıklama</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Toplamadığımız Veriler</h3>
+  <ul>
+    <li>Konum bilgisi</li>
+    <li>Telefon rehberi / kişiler</li>
+    <li>SMS / aramalar</li>
+    <li>Sağlık verisi</li>
+    <li>Finansal bilgi</li>
+    <li>Reklam kimliği (AAID/IDFA)</li>
+  </ul>
+
+  <h2>3. Verilerinizi Nerede Saklıyoruz</h2>
+  <p>
+    Verileriniz <strong>Supabase</strong> altyapısında saklanır (Postgres veritabanı + Storage).
+    Tüm veri iletimi TLS şifrelemesi ile yapılır. Veritabanında <em>Row Level Security (RLS)</em>
+    aktiftir; yani sadece siz kendi verilerinize erişebilirsiniz, başka kullanıcılar göremez.
+  </p>
+
+  <h2>4. Üçüncü Taraf Servisler</h2>
+  <p>Papirus, hizmeti sağlamak için aşağıdaki üçüncü taraf servisleri kullanır:</p>
+  <ul>
+    <li><strong>Supabase</strong> — Veritabanı ve kimlik doğrulama. <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Gizlilik Politikası</a></li>
+    <li><strong>Google Books API</strong> — ISBN ile kitap bilgisi getirmek (yalnızca sorgu gönderilir, kişisel veri paylaşılmaz). <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Gizlilik Politikası</a></li>
+    <li><strong>Open Library</strong> — Alternatif kitap bilgisi kaynağı. <a href="https://openlibrary.org/policies/privacy" target="_blank" rel="noopener">Gizlilik Politikası</a></li>
+    <li><strong>Sentry</strong> — Çökme raporları ("diagnostics") için. Kişisel veri içermez, yalnızca teknik hata bilgisi. <a href="https://sentry.io/privacy/" target="_blank" rel="noopener">Gizlilik Politikası</a></li>
+    <li><strong>Google Sign-In</strong> — Opsiyonel Google ile giriş için. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Gizlilik Politikası</a></li>
+    <li><strong>Expo / EAS</strong> — Push bildirim altyapısı. <a href="https://expo.dev/privacy" target="_blank" rel="noopener">Gizlilik Politikası</a></li>
+  </ul>
+
+  <h2>5. Veri Saklama Süresi</h2>
+  <p>
+    Verileriniz, hesabınız aktif olduğu sürece saklanır. <strong>Hesabınızı sildiğinizde</strong>
+    (uygulama içinde Profil → Hesabı Sil) tüm verileriniz <em>kalıcı olarak ve geri dönüşsüz şekilde</em>
+    silinir. Bu silme işlemi 30 gün içinde tüm yedeklerde de tamamlanır.
+  </p>
+
+  <h2>6. Haklarınız (KVKK Madde 11 + GDPR)</h2>
+  <p>Aşağıdaki haklara sahipsiniz:</p>
+  <ul>
+    <li>Verilerinizin işlenip işlenmediğini öğrenme</li>
+    <li>Verilerinize erişim talep etme (veri ihracı)</li>
+    <li>Verilerinizin düzeltilmesini isteme</li>
+    <li>Verilerinizin silinmesini isteme (uygulama içinden veya e-posta ile)</li>
+    <li>İşlemeye itiraz etme</li>
+    <li>Veri taşınabilirliği</li>
+  </ul>
+  <p>
+    Bu hakları kullanmak için: uygulama içindeki <em>Profil → Hesabı Sil</em> seçeneğini kullanın
+    veya <a href="mailto:dyyalcin90@gmail.com">dyyalcin90@gmail.com</a> adresine yazın.
+    Taleplere en geç <strong>30 gün içinde</strong> yanıt verilir.
+  </p>
+
+  <h2>7. Çocukların Gizliliği</h2>
+  <p>
+    Papirus 13 yaş ve üstü kullanıcılar için tasarlanmıştır. 13 yaş altı kullanıcıların
+    veri toplandığını fark edersek hesap silinir ve veriler imha edilir.
+  </p>
+
+  <h2>8. Güvenlik</h2>
+  <p>
+    Tüm veri iletimi HTTPS / TLS 1.2+ ile şifrelenir. Şifreler tek yönlü hash ile saklanır.
+    Yine de internet üzerinden hiçbir iletim %100 güvenli değildir; gerekli özen gösterilse de
+    mutlak güvenlik garanti edilemez.
+  </p>
+
+  <h2>9. Reklam ve İzleme</h2>
+  <p>
+    Papirus <strong>hiçbir reklam</strong> göstermez ve <strong>kullanıcı davranış izlemesi</strong> yapmaz.
+    Üçüncü taraf reklam ağlarına veri paylaşılmaz.
+  </p>
+
+  <h2>10. Politika Değişiklikleri</h2>
+  <p>
+    Bu politika güncellenebilir. Önemli değişikliklerde uygulama içi bildirim veya e-posta ile
+    haberdar edilirsiniz. Güncel sürüm her zaman bu sayfada yayınlanır.
+  </p>
+
+  <h2>11. İletişim</h2>
+  <div class="card">
+    <p>Her türlü gizlilik talebi, sorusu veya şikayeti için:<br>
+    <strong>E-posta:</strong> <a href="mailto:dyyalcin90@gmail.com">dyyalcin90@gmail.com</a></p>
+  </div>
+
+  <hr style="margin: 60px 0 30px; border: none; border-top: 1px solid var(--border);">
+
+  <!-- ENGLISH VERSION -->
+  <header id="en" style="margin-top: 40px;">
+    <h1>Papirus — Privacy Policy</h1>
+    <div class="meta">Last updated: 30 May 2026 · Version 1.0</div>
+  </header>
+
+  <p>
+    This privacy policy explains how the <strong>Papirus</strong> mobile application
+    (package: <code>com.papirusapp.app</code>) collects, processes, stores and protects
+    user data. By downloading and using the app, you accept this policy.
+  </p>
+
+  <h2>1. Data Controller</h2>
+  <div class="card">
+    <p><strong>Developer:</strong> Yusuf Yalçın (individual developer)<br>
+    <strong>Contact email:</strong> <a href="mailto:dyyalcin90@gmail.com">dyyalcin90@gmail.com</a><br>
+    <strong>Application:</strong> Papirus — Personal Library</p>
+  </div>
+
+  <h2>2. Data We Collect</h2>
+  <p>Papirus collects only the minimum data needed to provide the service:</p>
+  <ul>
+    <li><strong>Email address</strong> — required for account creation</li>
+    <li><strong>Display name</strong> — optional, for profile</li>
+    <li><strong>Profile picture</strong> — optional</li>
+    <li><strong>Book list</strong> — books you add</li>
+    <li><strong>Notes and quotes</strong> — content you create</li>
+    <li><strong>Reading sessions</strong> — pages you mark as read</li>
+    <li><strong>Push notification token</strong> — optional, for notifications</li>
+    <li><strong>Crash reports (Sentry)</strong> — technical diagnostics only</li>
+  </ul>
+
+  <h3>What we don't collect</h3>
+  <p>Location, contacts, SMS, health data, financial info, advertising IDs.</p>
+
+  <h2>3. Where We Store Data</h2>
+  <p>
+    Data is stored on <strong>Supabase</strong> infrastructure (Postgres + Storage). All transit
+    is TLS encrypted. Row Level Security is enabled — only you can access your own data.
+  </p>
+
+  <h2>4. Third Parties</h2>
+  <ul>
+    <li>Supabase — database & authentication</li>
+    <li>Google Books API — ISBN lookups</li>
+    <li>Open Library — ISBN lookups (fallback)</li>
+    <li>Sentry — crash diagnostics only</li>
+    <li>Google Sign-In — optional sign-in</li>
+    <li>Expo / EAS — push notification infrastructure</li>
+  </ul>
+
+  <h2>5. Data Retention</h2>
+  <p>
+    Data is kept as long as your account is active. When you delete your account
+    (Profile → Delete Account), all your data is permanently and irreversibly deleted
+    within 30 days, including from backups.
+  </p>
+
+  <h2>6. Your Rights (GDPR + KVKK)</h2>
+  <p>You have the right to access, rectify, delete, export and object to processing
+  of your data. Use the in-app delete option or email
+  <a href="mailto:dyyalcin90@gmail.com">dyyalcin90@gmail.com</a>. We respond within 30 days.</p>
+
+  <h2>7. Children's Privacy</h2>
+  <p>Papirus is designed for users aged 13+. We do not knowingly collect data from
+  children under 13.</p>
+
+  <h2>8. Security</h2>
+  <p>All transit uses HTTPS / TLS 1.2+. Passwords are hashed (one-way). However, no
+  internet transmission is 100% secure.</p>
+
+  <h2>9. No Ads, No Tracking</h2>
+  <p>Papirus shows no advertisements and does not track user behavior.</p>
+
+  <h2>10. Changes</h2>
+  <p>This policy may be updated. Significant changes are communicated via in-app
+  notification or email.</p>
+
+  <h2>11. Contact</h2>
+  <p>For any privacy-related question or request:
+  <a href="mailto:dyyalcin90@gmail.com">dyyalcin90@gmail.com</a></p>
+
+  <footer>
+    © 2026 Papirus · com.papirusapp.app
+  </footer>
+
+</div>
+</body>
+</html>
